@@ -28,7 +28,7 @@ gmt grdhisteq hillshade-grad.nc -Ghillshade-hist.nc -N.7     # -N é normalizaç
 gmt grdimage $g $r $j -Cmyetopo1.cpt -Ihillshade-hist.nc -Ba2f1g1wEnS -Xc -Yc -K > $m   # com o -I colocamos o grid de sombra, -Ba<texto>f<borda>g<linhas>, -Xc centraliza
 gmt grdcontour topo_btaub_30s.grd -R -J -C500m -W.001,50 -K -O >> $m                    # estou usando o grid com menos resolução feito no script1, tentem usar o $g para ver a diferença
 gmt pscoast -R -J -B+t"Topografia" -Cdarkblue -Da -K -O >> $m                           # -B+t coloca o titulo, -C colore as regiões alagadas, -Smar, -Wlinhadecosta, -Gareaseca, -Da resolução auto
-gmt pscoast -R -J -Na/0.3p -Df -W -K -O >> $m 
+gmt pscoast -R -J -Na/0.3p -Df -Lf-41/-24.5/10/100+l -T-40/-26/1 -W -K -O >> $m         # -Lf escala +l unidade, -T norte, se coloca mais /1 rosa dos ventos
 gmt psscale -D10/-1/18/0.5h -Ba1000:"m": -Cmyetopo1.cpt -E -K -O >> $m                  # -B intervalo dos numeros na paleta :textonapaleta:, -E coloca triangulos nas extremidades, ele reclama pq é do GMT4...
 gmt pscoast -Rg -JG-50/5/4 -Bg30 -Swhite -Da -X18 -Y12 -A10000 -G50 -K -O >> $m         # -Rg projeção global, -JG é projeção global:x/y centrais e tamanho do globinho em cm (default)
                                                                                         # -Bg indica a distancia das linhas de latlong, -X e -Y sempre posição em cm (default)
