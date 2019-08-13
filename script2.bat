@@ -21,8 +21,10 @@ REM tabela de cores
 gmt makecpt -Cglobe -T-3500/3500/10 > myetopo1.cpt                         
 
 REM fazer a sombra do grid
-gmt grdgradient %g% -Ghillshade-grad.nc -A335                 REM -A é o azimute
-gmt grdhisteq hillshade-grad.nc -Ghillshade-hist.nc -N.7     REM -N é normalização, tentem varia-lo
+gmt grdgradient %g% -Ghillshade-grad.nc -A335                
+REM -A é o azimute
+gmt grdhisteq hillshade-grad.nc -Ghillshade-hist.nc -N.7     
+REM -N é normalização, tentem varia-lo
 
 REM mapa
 gmt grdimage %g% %r% %j% -Cmyetopo1.cpt -Ihillshade-hist.nc -Ba2f1g1wEnS -Xc -Yc -K > %m%
