@@ -31,7 +31,8 @@ gmt grdcontour topo_btaub_30s.grd -R -J -C500m -W.001,50 -K -O >> %m%
 REM estou usando o grid com menos resolução feito no script1, tentem usar o %g% para ver a diferença                
 gmt pscoast -R -J -B+t"Topografia" -Cdarkblue -Df -K -O >> %m%
 REM -B+t coloca o titulo, -C colore as regiões alagadas, -Smar, -Wlinhadecosta, -Gareaseca                         
-gmt pscoast -R -J -Na/0.3p -Df -W -K -O >> %m% 
+gmt pscoast -R -J -Na/0.3p -Df -Lf-41/-24.5/10/100+l -T-40/-26/1 -W -K -O >> %m%
+REM -Lf escala +l unidade, -T norte, se coloca mais /1 rosa dos ventos
 gmt psscale -D10/-1/18/0.5h -Ba1000:"m": -Cmyetopo1.cpt -E -K -O >> %m%                  
 REM -B intervalo dos numeros na paleta :textonapaleta:, -E coloca triangulos nas extremidades, ele reclama pq é do GMT4...
 
