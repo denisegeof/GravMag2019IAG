@@ -57,7 +57,7 @@ REM o grdmath tem essa cara de calculadora cientÃ­fica, deem uma olhada nas funÃ
 
 REM grdinfo dif_topo_teste.grd
 
-grdimage dif_sample.grd -Rdif_sample.grd -JM20 -Ba1f1 -Cmycolor.cpt > dif_sample.ps
+grdimage dif_topo_teste.grd -Rdif_topo_teste.grd -JM20 -Ba1f1 -Cmycolor.cpt > dif_sample.ps
 
 REM agora vamos usar mais camadas na nossa imagem, para adicionar camadas use >>
 REM precisamos tambem dizer para o GMT manter a figura aberta com o -K e quando fechar, com o -O
